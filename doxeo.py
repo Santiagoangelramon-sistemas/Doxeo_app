@@ -38,16 +38,62 @@ titulo = Label(frame_juego, text="Edad: 16 años", fg="White",bg="Black", font=(
 titulo.place(x=220, y=96)
 
 # Título y subtítulos
-titulo = Label(frame_juego, text="Edad: 16 años", fg="White",bg="Black", font=("Arial", 15, "bold"))
-titulo.place(x=220, y=96)
+titulo = Label(frame_juego, text="Pais: Colombia", fg="White",bg="Black", font=("Arial", 15, "bold"))
+titulo.place(x=220, y=124)
 
-logo = PhotoImage(file="Kangelox.png")
+# Título y subtítulos
+titulo = Label(frame_juego, text="Lugar de origen: San Gil - Santander", fg="White",bg="Black", font=("Arial", 15, "bold"))
+titulo.place(x=220, y=155)
+
+# Título y subtítulos
+titulo = Label(frame_juego, text="Estatura: 1.73m", fg="White",bg="Black", font=("Arial", 15, "bold"))
+titulo.place(x=220, y=180)
+
+# Título y subtítulos
+titulo = Label(frame_juego, text="Peso: 90 kg", fg="White",bg="Black", font=("Arial", 15, "bold"))
+titulo.place(x=220, y=205)
+
+logo = PhotoImage(file="empanadas.png")
 lb_logo = Label(frame_juego, image=logo, bg="Black")
 lb_logo.place(x=20, y=40)
+
+logo_2 = PhotoImage(file="Papurris.png")
+lb_logo = Label(frame_juego, image=logo_2, bg="Black")
+lb_logo.place(x=20, y=250)
+
+logo_2 = PhotoImage(file="Kangelox.png")
+lb_logo = Label(frame_juego, image=logo_2, bg="Black")
+lb_logo.place(x=20, y=250)
+
+
 def familia():
     global toplevel_centigrados
     toplevel_centigrados = Toplevel()
     toplevel_centigrados.title("familia")
+    toplevel_centigrados.resizable(False, False)
+    toplevel_centigrados.geometry("600x500")
+    toplevel_centigrados.config(bg="white")
+
+def Animes():
+    global toplevel_centigrados
+    toplevel_centigrados = Toplevel()
+    toplevel_centigrados.title("Animes Favoritos")
+    toplevel_centigrados.resizable(False, False)
+    toplevel_centigrados.geometry("600x500")
+    toplevel_centigrados.config(bg="white")
+
+def Videojuegos():
+    global toplevel_centigrados
+    toplevel_centigrados = Toplevel()
+    toplevel_centigrados.title("Videojuegos Favoritos")
+    toplevel_centigrados.resizable(False, False)
+    toplevel_centigrados.geometry("600x500")
+    toplevel_centigrados.config(bg="white")
+
+def Personajes():
+    global toplevel_centigrados
+    toplevel_centigrados = Toplevel()
+    toplevel_centigrados.title("Personajes")
     toplevel_centigrados.resizable(False, False)
     toplevel_centigrados.geometry("600x500")
     toplevel_centigrados.config(bg="white")
@@ -102,6 +148,15 @@ def proyecto():
 
 bt_familia = Button(ventana,text="familia", command=familia)    
 bt_familia.place(x=130, y=460, width=100, height=30)
+
+bt_Animes = Button(ventana,text="Animes", command=Animes)    
+bt_Animes.place(x=110, y=500, width=100, height=30)
+
+bt_Personajes = Button(ventana,text="Personajes", command=Personajes)    
+bt_Personajes.place(x=340, y=500, width=120, height=30)
+
+bt_Videojuegos = Button(ventana,text="Videojuegos", command=Videojuegos)    
+bt_Videojuegos.place(x=230, y=500, width=100, height=30)
 
 bt_educacion = Button(ventana, text="educacion", command= educacion)
 bt_educacion.place(x=240, y=460, width=100, height=30)
